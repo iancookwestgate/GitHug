@@ -1,9 +1,7 @@
 import { Component, Input } from '@angular/core';
 import {ProfileFeedComponent} from './profile-feed/profile-feed.component'
 import { Post } from './models/post.model'
-import { OAuthService } from 'angular-oauth2-oidc';
-import { JwksValidationHandler } from 'angular-oauth2-oidc';
-import { authConfig } from './auth.config';
+
 
 @Component({
   selector: 'app-root',
@@ -13,13 +11,7 @@ import { authConfig } from './auth.config';
 
 export class AppComponent{
 
-  constructor(private oauthService: OAuthService) {
-  this.configureWithNewConfigApi();
-}
-  private configureWithNewConfigApi() {
-  this.oauthService.configure(authConfig);
-  this.oauthService.tokenValidationHandler = new JwksValidationHandler();
-  this.oauthService.loadDiscoveryDocumentAndTryLogin();
+  constructor() {
 }
 
 }

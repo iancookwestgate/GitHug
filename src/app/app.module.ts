@@ -11,14 +11,13 @@ import { ProfileFeedComponent } from './profile-feed/profile-feed.component';
 import { FindFriendsComponent } from './find-friends/find-friends.component';
 import { PublicFeedComponent } from './public-feed/public-feed.component';
 import { masterFirebaseConfig } from './api-keys';
-import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { LoginComponent } from './login/login.component';
 import { MediumComponent } from './medium/medium.component';
-import { HttpClientModule } from '@angular/common/http';
-import { OAuthModule } from 'angular-oauth2-oidc';
+import { UserLoginComponent } from './users/user-login/user-login.component';
+import { UserProfileComponent } from './users/user-profile/user-profile.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -39,17 +38,17 @@ export const firebaseConfig = {
     HomepageComponent,
     PostDetailComponent,
     LoginComponent,
-    MediumComponent
+    MediumComponent,
+    UserLoginComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule,
-    HttpClientModule,
-    OAuthModule.forRoot()
+    // AngularFireModule.initializeApp(firebaseConfig),
+    // AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,9 +7,8 @@
 <div class="post-body" *ngIf="postBody">
   <editor [apiKey]="apiKey" [formControl]="post" [init]="{plugins: 'link'}"></editor>
   <button id="submit-post"(click)="createPost(); postSubmitted(post.value);">Share</button>
-</div>
-
-<div *ngIf="post.value"class="preview">
-  <div class="">Post Preview: <br></div>
-  <div [innerHTML]="post.value"></div>
+  <div *ngIf="post.value"class="preview">
+    <div class="">Post Preview: <br></div>
+    <div [innerHTML]="post.value"></div>
+  </div>
 </div>

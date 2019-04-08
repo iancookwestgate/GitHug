@@ -1,17 +1,14 @@
-import { Component, Input } from '@angular/core';
-import {ProfileFeedComponent} from './profile-feed/profile-feed.component'
-import { Post } from './models/post.model'
+import { Component, OnInit } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { JwksValidationHandler } from 'angular-oauth2-oidc';
-import { authConfig } from './auth.config';
+import { authConfig } from '../auth.config';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-medium',
+  templateUrl: './medium.component.html',
+  styleUrls: ['./medium.component.css']
 })
-
-export class AppComponent{
+export class MediumComponent implements OnInit {
 
   constructor(private oauthService: OAuthService) {
   this.configureWithNewConfigApi();
@@ -21,5 +18,7 @@ export class AppComponent{
   this.oauthService.tokenValidationHandler = new JwksValidationHandler();
   this.oauthService.loadDiscoveryDocumentAndTryLogin();
 }
+  ngOnInit() {
+  }
 
 }

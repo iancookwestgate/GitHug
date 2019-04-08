@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FirebaseListObservable } from 'angularfire2/database';
 import {User} from '../models/users.model';
-import {UserService} from '../user.service'
+import {UserService} from '../user.service';
+import { OAuthService } from 'angular-oauth2-oidc';
+
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ import {UserService} from '../user.service'
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService, private oauthService: OAuthService) { }
   login(){
     this.router.navigate(['home']);
   }

@@ -16,6 +16,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { LoginComponent } from './login/login.component';
+import { MediumComponent } from './medium/medium.component';
+import { HttpClientModule } from '@angular/common/http';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -36,6 +39,7 @@ export const firebaseConfig = {
     HomepageComponent,
     PostDetailComponent,
     LoginComponent,
+    MediumComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,9 @@ export const firebaseConfig = {
     HttpModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HttpClientModule,
+    OAuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

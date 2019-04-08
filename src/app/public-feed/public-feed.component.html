@@ -1,0 +1,7 @@
+
+<div class="post"*ngFor="let post of postToDisplay | async" (click)="goToPost(post)">
+  <h3>content: {{post.content}}</h3>
+  <div class="post-actions">
+    <span>Comment</span><span>Like</span>
+  </div>
+</div>

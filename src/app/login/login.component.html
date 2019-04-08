@@ -1,0 +1,16 @@
+<app-nav-bar></app-nav-bar>
+<h1 class="header">Welcome to GoalBuddy!</h1>
+<div class="login-area">
+  <input #userName placeholder="User Name">
+  <input #password placeholder="Password">
+  <div class="buttons">
+    <button (click)="login(userName.value, password.value)">login</button>
+  </div>
+</div>
+
+<div class="registration">
+  <input #email placeholder="email address">
+  <input #userName placeholder="User Name">
+  <input #password placeholder="Password">
+  <button (click)="createAccount(email.value, userName.value, password.value); clearForm();">Signup!</button>
+</div>

@@ -1,0 +1,21 @@
+
+
+.post{
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: auto;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-left: 30%;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.post-actions{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+}

@@ -1,0 +1,10 @@
+<div class="feed-post" *ngIf="!postBody">
+  <div class="start-post" (click)="showPostBody()">
+    <input id="start-post" type="text" name="" value="" placeholder="Start a post">
+  </div>
+</div>
+
+<div class="post-body" *ngIf="postBody">
+  <input id="post" type="text" #userPost placeholder="What's up?">
+  <button (click)="createPost(); postSubmitted(userPost.value);">Share</button>
+</div>

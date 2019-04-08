@@ -1,15 +1,17 @@
-
-
-.post{
+.feed-area{
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 5px;
-  border: 1px solid gray;
-  border-radius: 10px;
-  margin-left: 30%;
-  margin-top: 25px;
-  margin-bottom: 50px;
+  justify-content: space-around;
+}
+
+.post{
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 10% auto 5% auto;
+  border: solid red 1px;
 }
 
 .post-actions{

@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 })
 
 export class PublicFeedComponent {
+  @Input() selectedPost;
 
   postToDisplay: FirebaseListObservable<any[]>;
 
@@ -26,6 +27,13 @@ export class PublicFeedComponent {
 
   goToPost(clickedPost){
     this.router.navigate(['posts', clickedPost.$key])
+  }
+
+  beginDeletingPost(postToDelete){
+    if(confirm("Are you sure you want to delete this post?")){
+      console.log(postToDelete);
+     this.postService.deletePost(postToDelete);
+   }
   }
 
 }

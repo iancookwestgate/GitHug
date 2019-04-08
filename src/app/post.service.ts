@@ -18,6 +18,11 @@ export class PostService {
     return this.database.object('posts/' + postId)
   }
 
+  deletePost(localPostToDelete){
+    let postInFireBase = this.getPostById(localPostToDelete.$key);
+    postInFireBase.remove();
+  }
+
   addPost(newPost: Post){
     this.posts.push(newPost)
   }

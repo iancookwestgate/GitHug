@@ -16,22 +16,16 @@ export class ProfileFeedComponent implements OnInit  {
   postBody = null;
   post = new FormControl('');
   apiKey = tinyApiKey;
-
-
-
   showPostBody(){
     this.postBody = 1;
   }
-
   createPost(){
     this.postBody = null;
   }
-
   postSubmitted(post: string){
     const newPost: Post = new Post(post);
     this.postService.addPost(newPost)
   }
-
   constructor(private postService: PostService) {}
 
   ngOnInit() {

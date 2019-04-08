@@ -2,6 +2,8 @@ import { Component, OnInit} from '@angular/core';
 import { Post } from "../models/post.model"
 import { PostService } from '../post.service'
 import { FirebaseListObservable } from 'angularfire2/database';
+import { FormControl } from '@angular/forms';
+import { tinyApiKey } from '../api-keys';
 
 @Component({
   selector: 'app-profile-feed',
@@ -12,6 +14,8 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class ProfileFeedComponent implements OnInit  {
 
   postBody = null;
+  post = new FormControl('');
+  apiKey = tinyApiKey;
 
 
 

@@ -1,0 +1,6 @@
+<div *ngIf="isLoggedIn">
+  <h1>{{userName}}</h1>
+  <a (click)="logout()">Log Out</a>
+</div>
+
+<h3 *ngIf="!isLoggedIn"><a (click)="login()">Log in!</a></h3>

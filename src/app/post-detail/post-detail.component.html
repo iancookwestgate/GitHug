@@ -1,9 +1,9 @@
 <app-nav-bar></app-nav-bar>
-<div class="main">
-  <div class="post">
-    <h2>{{(postToDisplay | async)?.content}}</h2>
+  <div class="main">
+    <div class="post">
+      <p [innerHTML]="(postToDisplay | async)?.content"></p>
+    </div>
     <div class="post-actions">
-      <span>like</span><span>Comment</span>
+      <span><button class="button">like</button></span><span><button class="button">Comment</button></span>
     </div>
   </div>
-</div>

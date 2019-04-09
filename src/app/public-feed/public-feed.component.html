@@ -1,10 +1,13 @@
 <div class="feed-area">
-
-  <div class="post"*ngFor="let post of postToDisplay | async" (click)="goToPost(post)">
-    <div [innerHTML]="post.content">
+  <div class="post" *ngFor="let post of postToDisplay | async" (click)="goToPost(post)">
+    <div class="post-content">
+      <div [innerHTML]="post.content">
+      </div>
     </div>
-    <div class="post-actions">
-      <button (click)="beginDeletingPost(post)">Delete</button>
-    </div>
+      <div class="post-actions">
+        <button class="delete" (click)="beginDeletingPost(post)">Delete</button>
+        <button class="share" (click)="beginSharingPost(post)">Share</button>
+        <button class="comment" (click)="beginCommentPost(post)">See More</button>
+      </div>
   </div>
 </div>

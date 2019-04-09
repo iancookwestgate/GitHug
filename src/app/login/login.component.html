@@ -11,6 +11,7 @@
 <div class="registration">
   <input #email placeholder="email address">
   <input #userName placeholder="User Name">
+  <input #github placeholder="github username">
   <input #password placeholder="Password">
-  <button (click)="createAccount(email.value, userName.value, password.value); clearForm();">Signup!</button>
+  <button (click)="createAccount(email.value, userName.value, github.value, password.value); clearForm();">Signup!</button>
 </div>

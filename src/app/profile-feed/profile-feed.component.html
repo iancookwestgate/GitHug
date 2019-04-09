@@ -4,6 +4,8 @@
   </div>
 </div>
 
+
+
 <div class="post-body" *ngIf="postBody">
   <editor [apiKey]="apiKey" [formControl]="post" [init]="{plugins: 'link'}"></editor>
   <button id="submit-post"(click)="createPost(); postSubmitted(post.value);">Share</button>

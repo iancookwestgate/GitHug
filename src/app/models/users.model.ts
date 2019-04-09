@@ -1,3 +1,3 @@
 export class User{
-  constructor(public email: string, public userName: string, public password: string){};
+  constructor(public email: string, public userName: string, public github:string, public password: string){};
 }

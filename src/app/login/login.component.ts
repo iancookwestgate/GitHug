@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['home']);
   }
 
-  createAccount(email: string, username: string, password: string){
-    const newUser: User = new User(email,username,password);
+  createAccount(email: string, username: string, github: string, password: string){
+    const newUser: User = new User(email,username,github,password);
     this.userService.addUser(newUser);
   }
 

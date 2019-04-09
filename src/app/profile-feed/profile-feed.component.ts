@@ -5,6 +5,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 import { FormControl } from '@angular/forms';
 import { tinyApiKey } from '../api-keys';
 
+
 @Component({
   selector: 'app-profile-feed',
   templateUrl: './profile-feed.component.html',
@@ -16,6 +17,9 @@ export class ProfileFeedComponent implements OnInit  {
   postBody = null;
   post = new FormControl('');
   apiKey = tinyApiKey;
+  githubRepos;
+  selectedRepo;
+
   showPostBody(){
     this.postBody = 1;
   }
@@ -26,10 +30,17 @@ export class ProfileFeedComponent implements OnInit  {
     const newPost: Post = new Post(post);
     this.postService.addPost(newPost)
   }
+
   constructor(private postService: PostService) {}
 
+
   ngOnInit() {
+    // this.setProfileInfo();
   }
 
+
+  addRepo(){
+
+  }
 
 }

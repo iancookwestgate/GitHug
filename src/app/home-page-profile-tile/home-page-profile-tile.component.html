@@ -13,8 +13,9 @@
   </div>
 </div>
 <div >
-  <select>
-    <option *ngFor='let repo of githubRepos' value='{{repo.url}}' >{{repo.name}}</option>
+  <select #repoSelector >
+    <option *ngFor='let repo of githubRepos' value='{{repo.url}}'>{{repo.name}}</option>
   </select>
-  <button type="button" name="button"></button>
+  <button type="button" (click)="selectRepo(repoSelector.value)"></button>
 </div>
+<app-repo-list></app-repo-list>

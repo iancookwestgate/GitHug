@@ -1,20 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../github.service';
 import { UserService } from '../user.service';
+import { PostRepoService } from '../post-repo.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { PostRepo } from '../models/postRepo.model';
 
 
 @Component({
   selector: 'app-home-page-profile-tile',
   templateUrl: './home-page-profile-tile.component.html',
   styleUrls: ['./home-page-profile-tile.component.css'],
-  providers: [GithubService, UserService]
+  providers: [GithubService, UserService, PostRepoService]
 })
 export class HomePageProfileTileComponent implements OnInit {
 
-  constructor(private githubService:GithubService, private userService:UserService) { }
+  constructor(private githubService:GithubService, private userService:UserService, private postRepoService:PostRepoService) { }
   userProfile;
   githubRepos;
+  // selectedRepo;
   ngOnInit() {
     this.userService.getUsers().subscribe(response=>{
       this.setProfileInfo(response[2].github);
@@ -37,6 +40,9 @@ export class HomePageProfileTileComponent implements OnInit {
     });
   }
 
-
+  selectRepo(repo){
+    let newRepo= new PostRepo(repo);
+    this.postRepoService.addPost(newRepo);
+  }
 
 }

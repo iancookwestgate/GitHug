@@ -19,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditDetailComponent } from './edit-detail/edit-detail.component';
+import { RepoListComponent } from './repo-list/repo-list.component';
 
 
 
@@ -42,6 +43,7 @@ export const firebaseConfig = {
     PostDetailComponent,
     LoginComponent,
     EditDetailComponent,
+    RepoListComponent,
 
   ],
   imports: [

@@ -19,9 +19,10 @@ export class HomePageProfileTileComponent implements OnInit {
   githubRepos;
   // selectedRepo;
   ngOnInit() {
-    this.userService.getUsers().subscribe(response=>{
-      this.setProfileInfo(response[2].github);
-    });
+  this.setProfileInfo();
+    // this.userService.getUsers().subscribe(response=>{
+    //   this.setProfileInfo();
+    // });
 
   }
   // needs to be updated with only one user
@@ -33,8 +34,8 @@ export class HomePageProfileTileComponent implements OnInit {
     // console.log("userProfile",this.userProfile)
   }
 
-  setProfileInfo(github){
-    this.githubService.getProfile(github).subscribe(response=>{
+  setProfileInfo(){
+    this.githubService.getProfile().subscribe(response=>{
       this.githubRepos=response.json();
       // console.log("thisprofile",this.githubRepos);
     });

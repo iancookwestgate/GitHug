@@ -7,8 +7,10 @@ export class GithubService {
 
   constructor(private http: Http) { }
 
-  getProfile(userName){
-    return this.http.get(`https://api.github.com/users/${userName}/repos?per_page=100&sort=author-date-asc`);
+  getProfile(){
+    return this.http.get(`https://api.github.com/user`);
   }
 
 }
+
+// this.http.get(`https://api.github.com/users/${userName}/repos?per_page=100&sort=author-date-asc`);

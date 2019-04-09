@@ -5,13 +5,12 @@ import { FirebaseListObservable } from 'angularfire2/database';
 import { FormControl } from '@angular/forms';
 import { tinyApiKey } from '../api-keys';
 
-import { GithubService } from '../github.service';
 
 @Component({
   selector: 'app-profile-feed',
   templateUrl: './profile-feed.component.html',
   styleUrls: ['./profile-feed.component.css'],
-  providers: [PostService, GithubService]
+  providers: [PostService]
 })
 export class ProfileFeedComponent implements OnInit  {
 
@@ -24,27 +23,21 @@ export class ProfileFeedComponent implements OnInit  {
   showPostBody(){
     this.postBody = 1;
   }
-
   createPost(){
     this.postBody = null;
   }
-
   postSubmitted(post: string){
     const newPost: Post = new Post(post);
     this.postService.addPost(newPost)
   }
 
-  constructor(private postService: PostService, public githubService: GithubService) {}
+  constructor(private postService: PostService) {}
+
 
   ngOnInit() {
-    this.setProfileInfo();
+    // this.setProfileInfo();
   }
-  setProfileInfo(){
-    this.githubService.getProfile().subscribe(response=>{
-      this.githubRepos=response.json();
-      console.log("user repos",this.githubRepos);
-    });
-  }
+
 
   addRepo(){
 

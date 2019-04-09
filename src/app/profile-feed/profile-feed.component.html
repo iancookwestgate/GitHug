@@ -1,19 +1,16 @@
 <div class="feed-post" *ngIf="!postBody">
   <div class="start-post" (click)="showPostBody()">
-    <button>Start a new blog post!</button>
+    <button id="new-post">Start a new blog post!</button>
   </div>
 </div>
-<div class="">
-  <select>
-    <option *ngFor='let repo of githubRepos' value='{{repo.url}}' >{{repo.name}}</option>
-  </select>
-  <button type="button" name="button"></button>
-</div>
+
 
 
 <div class="post-body" *ngIf="postBody">
   <editor [apiKey]="apiKey" [formControl]="post" [init]="{plugins: 'link'}"></editor>
-  <button (click)="createPost(); postSubmitted(post.value);">Share</button>
+  <button id="submit-post"(click)="createPost(); postSubmitted(post.value);">Share</button>
+  <div *ngIf="post.value"class="preview">
+    <div class="">Post Preview: <br></div>
+    <div [innerHTML]="post.value"></div>
+  </div>
 </div>
-
-<div [innerHTML]="post.value"></div>

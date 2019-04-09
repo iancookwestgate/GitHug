@@ -3,6 +3,13 @@
     <button>Start a new blog post!</button>
   </div>
 </div>
+<div class="">
+  <select>
+    <option *ngFor='let repo of githubRepos' value='{{repo.url}}' >{{repo.name}}</option>
+  </select>
+  <button type="button" name="button"></button>
+</div>
+
 
 <div class="post-body" *ngIf="postBody">
   <editor [apiKey]="apiKey" [formControl]="post" [init]="{plugins: 'link'}"></editor>

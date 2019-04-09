@@ -8,7 +8,7 @@ export class GithubService {
   constructor(private http: Http) { }
 
   getProfile(){
-    return this.http.get('https://api.github.com/users/grobergm/repos');
+    return this.http.get('https://api.github.com/users/grobergm/repos?per_page=100&sort=author-date-asc');
   }
 
 }

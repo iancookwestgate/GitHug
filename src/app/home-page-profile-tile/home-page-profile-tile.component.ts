@@ -12,7 +12,7 @@ export class HomePageProfileTileComponent implements OnInit {
   constructor(public githubService:GithubService) { }
   profile;
   ngOnInit() {
-    this.setProfileInfo();
+    // this.setProfileInfo();
   }
 
   setProfileInfo(){

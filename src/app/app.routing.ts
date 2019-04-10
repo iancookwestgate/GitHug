@@ -6,6 +6,7 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PublicFeedComponent } from './public-feed/public-feed.component';
 import { LoginComponent } from './login/login.component';
 import { EditDetailComponent } from './edit-detail/edit-detail.component';
+import { RepoDetailComponent } from './repo-detail/repo-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -15,6 +16,10 @@ const appRoutes: Routes = [
    {
       path: 'users/:username',
       component: HomepageComponent
+    },
+    {
+    path: 'users/:username/:repo',
+    component: RepoDetailComponent
     },
   {
     path: 'posts/:id',

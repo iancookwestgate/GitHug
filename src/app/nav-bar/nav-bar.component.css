@@ -1,9 +1,17 @@
 .nav-bar-main{
   display: flex;
   justify-content: space-between;
-  background-color: #1aff66;
+  background-color: #ff9900;
   height: 5vw;
   width: 100vw;
+}
+
+img {
+  cursor: pointer;
+}
+
+i {
+  cursor: pointer;
 }
 
 .nav-bar-left{

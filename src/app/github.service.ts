@@ -11,6 +11,10 @@ export class GithubService {
     return this.http.get(`https://api.github.com/users/${username}/repos?per_page=100&sort=author-date-asc`);
   }
 
+  getReadMe(username, repo){
+    return this.http.get(`https://api.github.com/users/${username}/${repo}/readme`);
+  }
+
 }
 
 // this.http.get(`https://api.github.com/users/${userName}/repos?per_page=100&sort=author-date-asc`);

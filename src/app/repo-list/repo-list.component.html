@@ -1,0 +1,1 @@
+<div *ngFor='let repo of repoPosts | async' class="repo" (click)="navigateRepo(repo.name)">{{repo.name}}</div>

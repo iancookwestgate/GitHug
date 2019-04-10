@@ -17,8 +17,6 @@ export class ProfileFeedComponent implements OnInit  {
   postBody = null;
   post = new FormControl('');
   apiKey = tinyApiKey;
-  githubRepos;
-  selectedRepo;
 
   showPostBody(){
     this.postBody = 1;

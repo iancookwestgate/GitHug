@@ -22,6 +22,7 @@ import { EditDetailComponent } from './edit-detail/edit-detail.component';
 import { RepoListComponent } from './repo-list/repo-list.component';
 import { GithubLoginComponent } from './github-login/github-login.component';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { RepoDetailComponent } from './repo-detail/repo-detail.component';
 
 
 
@@ -47,6 +48,7 @@ export const firebaseConfig = {
     EditDetailComponent,
     RepoListComponent,
     GithubLoginComponent,
+    RepoDetailComponent,
 
   ],
   imports: [

@@ -14,8 +14,11 @@
 </div>
 <div >
   <select #repoSelector >
-    <option *ngFor='let repo of githubRepos' value='{{repo.url}}'>{{repo.name}}</option>
+    <option *ngFor='let repo of githubRepos' value='{{repo.name}}'>{{repo.name}}</option>
   </select>
-  <button type="button" (click)="selectRepo(repoSelector.value)"></button>
+  <button type="button" (click)="selectRepo(repoSelector.value)">Add Repo</button>
 </div>
+<app-github-login></app-github-login>
+
+<button (click)="getUser()" type="button" name="button">GEt User</button>
 <app-repo-list></app-repo-list>

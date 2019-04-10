@@ -4,6 +4,7 @@ import { UserService } from '../user.service';
 import { PostRepoService } from '../post-repo.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { PostRepo } from '../models/postRepo.model';
+import { ActivatedRoute, Params} from '@angular/router';
 
 
 @Component({
@@ -14,15 +15,16 @@ import { PostRepo } from '../models/postRepo.model';
 })
 export class HomePageProfileTileComponent implements OnInit {
 
-  constructor(private githubService:GithubService, private userService:UserService, private postRepoService:PostRepoService) { }
+  constructor(private githubService:GithubService, private userService:UserService, private postRepoService:PostRepoService, public route:ActivatedRoute) { }
   userProfile;
   githubRepos;
+  userName;
   // selectedRepo;
   ngOnInit() {
-  this.setProfileInfo();
-    // this.userService.getUsers().subscribe(response=>{
-    //   this.setProfileInfo();
-    // });
+    this.route.params.forEach((urlParameters) => {
+      this.userName= urlParameters['username'];
+    });
+    this.setProfileInfo();
 
   }
   // needs to be updated with only one user
@@ -35,13 +37,14 @@ export class HomePageProfileTileComponent implements OnInit {
   }
 
   setProfileInfo(){
-    this.githubService.getProfile().subscribe(response=>{
+    this.githubService.getProfile(this.userName).subscribe(response=>{
       this.githubRepos=response.json();
-      // console.log("thisprofile",this.githubRepos);
+      console.log("thisprofile",this.githubRepos);
     });
   }
 
   selectRepo(repo){
+    console.log(repo);
     let newRepo= new PostRepo(repo);
     this.postRepoService.addPost(newRepo);
   }

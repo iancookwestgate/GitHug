@@ -1,6 +1,9 @@
 <app-nav-bar></app-nav-bar>
-<h1 class="header">Welcome to GoalBuddy!</h1>
-<div class="login-area">
+<h1 class="header">GitHug</h1>
+<p>A blogging site built by programmers for programmers</p>
+<input #username placeholder='gethub username'>
+<button routerLink='users/{{username.value}}'>Login</button>
+<!-- <div class="login-area">
   <input #userName placeholder="User Name">
   <input #password placeholder="Password">
   <div class="buttons">
@@ -16,4 +19,4 @@
   <button (click)="createAccount(email.value, userName.value, github.value, password.value); clearForm();">Signup!</button>
 </div>
 
-<app-github-login></app-github-login>
+<app-github-login></app-github-login> -->

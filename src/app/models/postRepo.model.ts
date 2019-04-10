@@ -1,3 +1,3 @@
 export class PostRepo{
-  constructor(public url: string){}
+  constructor(public name:string){}
 }

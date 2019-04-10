@@ -13,7 +13,7 @@ const appRoutes: Routes = [
      component: LoginComponent
    },
    {
-      path: 'home',
+      path: 'users/:username',
       component: HomepageComponent
     },
   {

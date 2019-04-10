@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
+import { GithubService } from '../github.service'
 
 @Component({
   selector: 'app-github-login',
@@ -13,7 +14,7 @@ export class GithubLoginComponent implements OnInit {
   private isLoggedIn: Boolean;
   private userName: String;
 
-  constructor(public authService: AuthenticationService) {
+  constructor(public authService: AuthenticationService, public githubService:GithubService) {
     this.authService.user.subscribe(user => {
       console.log(user);
       if (user == null) {

@@ -1,12 +1,9 @@
 <app-nav-bar></app-nav-bar>
-<h1>Edit Post</h1>
   <div class="main">
+    <h1>Edit Post</h1>
     <div class="post">
       <p [innerHTML]="(postToDisplay | async)?.content"></p>
-      <button id="submit-post"(click)="EditPost();">Edit</button>
     </div>
-  </div>
-
-  <div class="post-body">
-    <editor [apiKey]="apiKey" [formControl]="post" [init]="{plugins: 'link'}"></editor>
+    <button id="submit-post"(click)="EditPost();">Edit</button>
+    <editor [apiKey]="apiKey" [init]="{plugins: 'link'}"></editor>
   </div>

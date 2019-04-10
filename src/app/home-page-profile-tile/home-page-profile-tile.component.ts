@@ -25,19 +25,19 @@ export class HomePageProfileTileComponent implements OnInit {
       this.userName= urlParameters['username'];
     });
     this.setProfileInfo();
-
+    this.getProfile();
   }
   // needs to be updated with only one user
   getProfile(){
-    this.userService.getUsers().subscribe(response=>{
-      this.userProfile=response;
+    this.githubService.getProfile(this.userName).subscribe(response=>{
+      this.userProfile=response.json();
       console.log("user profile",this.userProfile);
     });
     // console.log("userProfile",this.userProfile)
   }
 
   setProfileInfo(){
-    this.githubService.getProfile(this.userName).subscribe(response=>{
+    this.githubService.getRepos(this.userName).subscribe(response=>{
       this.githubRepos=response.json();
       console.log("thisprofile",this.githubRepos);
     });

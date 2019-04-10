@@ -5,7 +5,8 @@
     </div>
   </div>
   <div class="nav-bar-right">
-    <img class="nav-bar-picture" src="/assets/images/profile-picture.jpg" alt="" (click)="goHome()">
+    <img class="nav-bar-picture" src="{{userProfile.avatar_url}}" alt="" (click)="goHome()">
+    <p>Logged in as {{userProfile.login}}</p>
     <i class="fas fa-sign-out-alt fa-2x" (click)="logout()"></i>
   </div>
 </div>

@@ -16,6 +16,7 @@ export class RepoListComponent implements OnInit {
 
   ngOnInit() {
     this.repoPosts=this.postRepoService.getPosts();
+    console.log("repolist is working")
   }
 
   navigateRepo(repoName){

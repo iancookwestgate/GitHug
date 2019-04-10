@@ -25,7 +25,6 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { RepoDetailComponent } from './repo-detail/repo-detail.component';
 
 
-
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,

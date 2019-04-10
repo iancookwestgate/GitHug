@@ -12,9 +12,9 @@ Have you ever complained about the inability of Medium, Blogger, and Wordpress t
 
 ## Features
 
-* User can login to the GitHug database and incorporate their repo info by logging into Github.
+* User can incorporate their repository info by logging into Github.
 * Full blogging functionality through the TinyMCE text editor.
-* All created posts can be assigned to the GitHub repo of the user's choice. These posts are then readable by anyone looking at the chosen repo on GitHug.
+* All created posts can be assigned to the GitHub repo of the user's choice. These posts are then accessible and readable by anyone on GitHug.
 
 ## Setup
 
@@ -41,9 +41,9 @@ Have you ever complained about the inability of Medium, Blogger, and Wordpress t
 
 ## Planned Features
 
-*
-*
-*
+* Allow user to login into a database unique to Githug that keeps track of user's posts and allows additional interactivity with the site.
+* Permit anonymous site visitors to read posts without having to provide Github login information.
+* Input additional Github info for the user, such as easily viewable READMEs and a display for project files.
 
 ## Technologies Used
 
@@ -61,9 +61,9 @@ Have you ever complained about the inability of Medium, Blogger, and Wordpress t
 
 ## Known Bugs
 
-*
-*
-*
+* On the landing page, the user has to click submit twice in order for the site to move on to the next page.
+* Though the site appears to function normally, inspecting the console reveals a host of errors that have yet to be dealt with.
+* 
 
 ## License
 

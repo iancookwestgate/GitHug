@@ -7,10 +7,10 @@
     <p>{{userProfile.bio}}</p>
     <div class="project-selector">
       <select #repoSelector >
-        <option *ngFor='let repo of githubRepos' value='{{repo.name}}'>{{repo.name}}</option>
+        <option *ngFor='let repo of repos' value='{{repo.name}}'>{{repo.name}}</option>
       </select>
       <br>
-      <button type="button" (click)="selectRepo(repoSelector.value)">Add Repo</button>
+      <button routerLink='{{repoSelector.value}}'>Go To Repo</button>
     </div>
   </div>
 </div>

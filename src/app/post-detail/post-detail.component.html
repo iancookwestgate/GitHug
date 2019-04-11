@@ -4,6 +4,6 @@
       <p [innerHTML]="(postToDisplay | async)?.content"></p>
     </div>
     <div class="post-actions">
-      <span><button class="button">like</button></span><span><button class="button">Comment</button></span>
+      <span><button id="hug" class="button">Hug</button></span><span><button id="comment" class="button">Comment</button></span><button id="delete" class="delete" (click)="beginDeletingPost(postToDisplay)" routerLink='..'>Delete</button>
     </div>
   </div>

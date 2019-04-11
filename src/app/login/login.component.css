@@ -1,14 +1,20 @@
-body {
-  background-image: url(/assets/images/background.jpg);
+.bg {
+  background-image: url('/assets/images/background.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 .header{
   text-align: center;
-  margin-top: 100px;
+  padding-top: 100px;
   font-size: 4rem;
+  color: #FFF;
+  margin: 0;
 }
 
 p {
+  color: #FFF;
   text-align: center;
   font-size: 1.25rem;
 }
@@ -39,22 +45,38 @@ input{
   margin-bottom: 25px;
 }
 
+.name-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .username, .login {
   display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
+  flex-direction: row;
+  align-content: center;
   text-align: center;
-  height: 2rem;
-  width: 12%;
+  height: inherit;
+  width: 100px;
+  margin-left: 2%;
+  border-radius: 7%;
+}
+
+.username{
+  height: 32px;
 }
 
 .login {
   background: #5000ff;
-  border-radius: 10%;
+  border-color: black;
   color: #FFF;
   font-weight: bold;
   font-size: 1rem;
+  /* border-radius: 7%; */
+  /* padding-left: 27px; */
+  padding: 0 0 0 27px;
+  height: 38px;
+
 }
 
 button {

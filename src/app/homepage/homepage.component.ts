@@ -1,10 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-// import { GithubService } from '../github.service';
+import { GithubService } from '../github.service';
+import { UserService } from '../user.service';
+import { PostRepoService } from '../post-repo.service';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { PostRepo } from '../models/postRepo.model';
+import { ActivatedRoute, Params} from '@angular/router';
+
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  styleUrls: ['./homepage.component.css'],
+  providers: [GithubService, UserService, PostRepoService]
 })
 export class HomepageComponent implements OnInit {
 

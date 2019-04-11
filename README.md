@@ -6,6 +6,8 @@
 
 Have you ever complained about the inability of Medium, Blogger, and Wordpress to reference your GitHub account? Have you ever wanted to blog about the projects you create on GitHub to an audience of enthusiastic fellow programmers? GitHugged is the site for you: a blogging hub where you can get recognition and show support for your GitHub labors as you work on every new project, all with easy reference to every bit of data you need from your GitHub account.
 
+Firebase URL: blog-40113.firebaseapp.com
+
 ## Wireframing
 
 ![Original conception of GitHugged when its name was "Blog Boyz"](src/assets/images/githug-wireframe.jpg)

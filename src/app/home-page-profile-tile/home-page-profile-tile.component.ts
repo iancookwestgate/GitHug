@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page-profile-tile',
@@ -8,10 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HomePageProfileTileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
   @Input() userProfile;
   @Input() repos;
+
   ngOnInit() {
   }
 
+  goToRepo(reponame){
+    this.router.navigate(['users',this.userProfile.login,reponame])
+  }
 }

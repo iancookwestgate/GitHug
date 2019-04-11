@@ -20,7 +20,6 @@ export class HomepageComponent implements OnInit {
     userProfile;
     githubRepos;
     userName;
-    // selectedRepo;
     ngOnInit() {
       this.route.params.forEach((urlParameters) => {
         this.userName= urlParameters['username'];

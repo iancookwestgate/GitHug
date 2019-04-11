@@ -13,9 +13,9 @@
 </div>
 <div >
   <select #repoSelector >
-    <option *ngFor='let repo of githubRepos' value='{{repo.name}}'>{{repo.name}}</option>
+    <option *ngFor='let repo of repos' value='{{repo.name}}'>{{repo.name}}</option>
   </select>
-  <button type="button" (click)="selectRepo(repoSelector.value)">Add Repo</button>
+  <button routerLink='{{repoSelector.value}}'>Go To Repo</button>
 </div>
 <!-- <app-github-login></app-github-login> -->
 <!-- <app-repo-list></app-repo-list> -->

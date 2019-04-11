@@ -26,3 +26,11 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+.profile-feed{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

@@ -1,5 +1,4 @@
 <div class="profile-tile">
-  <!-- <div *ngIf='userProfile' class="tile-top"> -->
   <div class="tile-top">
     <img id="profile-picture" src="{{userProfile.avatar_url}}" alt="">
     <h3>{{userProfile.name}}</h3>
@@ -17,5 +16,3 @@
   </select>
   <button routerLink='{{repoSelector.value}}'>Go To Repo</button>
 </div>
-<!-- <app-github-login></app-github-login> -->
-<!-- <app-repo-list></app-repo-list> -->

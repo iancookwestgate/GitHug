@@ -2,8 +2,8 @@
   <div class="main">
     <h1>Edit Post</h1>
     <div class="post">
-      <p [innerHTML]="(postToDisplay | async)?.content"></p>
+      <p [innerHTML]="postToDisplay.content"></p>
     </div>
-    <button id="submit-post"(click)="EditPost();">Edit</button>
-    <editor [apiKey]="apiKey" [init]="{plugins: 'link'}"></editor>
+    <editor #post [apiKey]="apiKey" initialValue="{{postToDisplay.content}}" [init]="{plugins: 'link'}"></editor>
+    <button id="submit-post"(click)="beginUpdatingPost(postToDisplay);">Edit</button>
   </div>

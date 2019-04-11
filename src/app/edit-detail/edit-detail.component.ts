@@ -6,6 +6,7 @@ import {PostService} from '../post.service';
 import { Post } from '../models/post.model';
 import { FormControl } from '@angular/forms';
 import { tinyApiKey } from '../api-keys';
+import {PublicFeedComponent} from "../public-feed/public-feed.component"
 
 
 @Component({
@@ -20,15 +21,24 @@ export class EditDetailComponent implements OnInit {
   postId;
   post = new FormControl('');
   apiKey = tinyApiKey;
+  userName;
+  repoName;
 
   constructor(private route: ActivatedRoute, private postService: PostService) { }
+
+  beginUpdatingPost(postToUpdate){
+    this.postService.updatePost(postToUpdate);
+  }
+
+
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) =>{
       this.postId = urlParameters['id'];
     });
-    this.postToDisplay = this.postService.getPostById(this.postId);
+    this.postService.getPostById(this.postId).subscribe(dataLastEmittedFromObserver => {
+     this.postToDisplay = dataLastEmittedFromObserver;
+   });
   }
-
 
 }

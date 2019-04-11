@@ -16,14 +16,19 @@ import { Router } from '@angular/router';
 export class PublicFeedComponent {
   @Input() selectedPost;
 
-  postToDisplay: FirebaseListObservable<any[]>;
+  postToDisplay;
+  postId;
 
 
   constructor(private router: Router, private postService: PostService) { }
 
   ngOnInit() {
-    this.postToDisplay = this.postService.getPosts();
-  }
+    this.postService.getPosts().subscribe(dataLastEmittedFromObserver => {
+     this.postToDisplay = dataLastEmittedFromObserver;
+     console.log(this.postToDisplay)
+   }
+  )};
+
 
   goToPost(clickedPost){
     this.router.navigate(['posts', clickedPost.$key])

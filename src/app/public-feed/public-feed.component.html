@@ -1,17 +1,18 @@
 <!-- <app-home-page-profile-tile></app-home-page-profile-tile> -->
 
 <div class="feed-area">
-  <div class="post" *ngFor="let post of postToDisplay">
-    <h1>{{post.username}}</h1>
+  <div class="post" *ngFor="let post of postToDisplay" (click)="goToPost(post)">
+    <!-- <h1>{{post.username}}</h1> -->
     <h2>{{post.reponame}}</h2>
     <p><em>By {{post.username}}</em></p>
+
     <div class="post-content">
       <div [innerHTML]="post.content">
       </div>
     </div>
       <!-- <div class="post-actions">
         <button class="edit" (click)="editPost(post)">Edit</button>
-        <button class="delete" (click)="beginDeletingPost(post)">Delete</button>
+      
         <button class="share" (click)="beginSharingPost(post)">Share</button>
         <button class="seeMore" (click)="goToPost(post)">See More</button>
       </div> -->

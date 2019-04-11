@@ -38,11 +38,6 @@ export class PublicFeedComponent {
     this.router.navigate(['posts/edit', clickedPost.$key])
   }
 
-  beginDeletingPost(postToDelete){
-    if(confirm("Are you sure you want to delete this post?")){
-      console.log(postToDelete);
-     this.postService.deletePost(postToDelete);
-   }
-  }
+
 
 }

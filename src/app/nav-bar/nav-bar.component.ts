@@ -27,7 +27,7 @@ export class NavBarComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.userName= urlParameters['username'];
     });
-    this.getProfile()
+    // this.getProfile()
   }
 
   getProfile(){

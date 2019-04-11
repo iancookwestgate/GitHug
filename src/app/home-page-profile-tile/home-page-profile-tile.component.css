@@ -1,9 +1,8 @@
 .profile-tile{
   display: flex;
-  flex-direction: column;
   width: 100%;
-  margin-left: 10%;
-  margin-top: 10%;
+  justify-content: center;
+  margin-top: 4%;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -17,9 +16,14 @@
 }
 
 #profile-picture{
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   border-radius: 5%;
+}
+
+.project-selector{
+  display: flex;
+  justify-content: center;
 }
 
 .tile-mid{
@@ -28,9 +32,8 @@
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  height: 2%;
   text-align: center;
-  border-top: solid gray 1px;
+  margin-left: 2%;
 }
 
 .tile-bottom{
@@ -39,7 +42,18 @@
   align-content: center;
   justify-content: space-around;
   height: 2%;
-  border-top: solid gray 1px;
   color: #4189fc;
   font-weight: bold;
+}
+
+.project-selector {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 50%;
 }

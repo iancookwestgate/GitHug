@@ -15,7 +15,7 @@ export class HomePageProfileTileComponent implements OnInit {
   ngOnInit() {
   }
 
-  goToRepo(reponame){
-    this.router.navigate(['users',this.userProfile.login,reponame])
-  }
+  // goToRepo(reponame){
+  //   this.router.navigate(['users',this.userProfile.login,reponame])
+  // }
 }

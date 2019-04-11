@@ -1,7 +1,12 @@
-<h1 class="header">GitHug</h1>
-<p>A blogging site built by programmers for programmers</p>
-<input #username placeholder='gethub username'>
-<button routerLink='users/{{username.value}}'>Login</button>
+<div class="bg">
+  <h1 class="header">GitHugged</h1>
+  <p>A blogging site built by programmers for programmers</p>
+  <p>Show that love for your repos.</p>
+  <div class="name-login">
+    <input class="username" #username placeholder='github username'>
+    <button class="login" routerLink='users/{{username.value}}'>Login</button>
+  </div>
+</div>
 <!-- <div class="login-area">
   <input #userName placeholder="User Name">
   <input #password placeholder="Password">

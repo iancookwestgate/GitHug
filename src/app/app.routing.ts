@@ -17,6 +17,10 @@ const appRoutes: Routes = [
       path: 'users/:username',
       component: HomepageComponent
     },
+
+
+
+    
     {
     path: 'users/:username/:repo',
     component: RepoDetailComponent

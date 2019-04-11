@@ -1,21 +1,16 @@
 <div class="profile-tile">
-  <!-- <div *ngIf='userProfile' class="tile-top"> -->
   <div class="tile-top">
     <img id="profile-picture" src="{{userProfile.avatar_url}}" alt="">
-    <h3>{{userProfile.name}}</h3>
   </div>
   <div class="tile-mid">
+    <h2>{{userProfile.name}}</h2>
     <p>{{userProfile.bio}}</p>
-  </div>
-  <div class="tile-bottom">
-    <p>*Repo count here: 123*</p>
+    <div class="project-selector">
+      <select #repoSelector >
+        <option *ngFor='let repo of repos' value='{{repo.name}}'>{{repo.name}}</option>
+      </select>
+      <br>
+      <button routerLink='{{repoSelector.value}}'>Go To Repo</button>
+    </div>
   </div>
 </div>
-<div >
-  <select #repoSelector >
-    <option *ngFor='let repo of githubRepos' value='{{repo.name}}'>{{repo.name}}</option>
-  </select>
-  <button type="button" (click)="selectRepo(repoSelector.value)">Add Repo</button>
-</div>
-<!-- <app-github-login></app-github-login> -->
-<!-- <app-repo-list></app-repo-list> -->

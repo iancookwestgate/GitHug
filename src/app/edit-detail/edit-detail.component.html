@@ -1,12 +1,9 @@
 <app-nav-bar></app-nav-bar>
-<h1>Edit Post</h1>
   <div class="main">
+    <h1>Edit Post</h1>
     <div class="post">
-      <p [innerHTML]="(postToDisplay | async)?.content"></p>
-      <button id="submit-post"(click)="EditPost();">Edit</button>
+      <p [innerHTML]="postToDisplay.content"></p>
     </div>
-  </div>
-
-  <div class="post-body">
-    <editor [apiKey]="apiKey" [formControl]="post" [init]="{plugins: 'link'}"></editor>
+    <editor #post [apiKey]="apiKey" initialValue="{{postToDisplay.content}}" [init]="{plugins: 'link'}"></editor>
+    <button id="submit-post"(click)="beginUpdatingPost(postToDisplay);">Edit</button>
   </div>

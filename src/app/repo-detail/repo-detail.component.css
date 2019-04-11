@@ -1,0 +1,36 @@
+.main{
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.repo-card{
+  height: 500px;
+  width: 1000px;
+  border: solid blue 3px;
+  border-radius: 5px;
+}
+
+.button{
+  margin: auto;
+}
+
+.public-feed{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.profile-feed{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

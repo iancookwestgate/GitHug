@@ -13,10 +13,18 @@
   flex-direction: column;
   justify-content: space-around;
   border: solid blue 3px;
-  border-radius: 10%;
+  border-radius: 5px;
   font-family: arial;
   text-align: center;
   margin-top: 10%;
+}
+
+button{
+  margin-top: 50px;
+  width: 50px;
+  background-color: lightblue;
+  color: white;
+  border-radius: 5px;
 }
 
 .post-actions{

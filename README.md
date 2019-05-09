@@ -12,6 +12,10 @@ Firebase URL: blog-40113.firebaseapp.com
 
 ![Original conception of GitHugged when its name was "Blog Boyz"](src/assets/images/githug-wireframe.jpg)
 
+## Landing Page
+
+![Picture of the landing page for GitHugged](src/assets/images/GitHugged.PNG)
+
 ## Features
 
 * User can incorporate their repository info by logging into Github.
